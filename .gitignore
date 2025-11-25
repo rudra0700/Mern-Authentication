@@ -1,0 +1,21 @@
+# Root level ignores
+node_modules/
+.env
+.env.local
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Ignore frontend build
+frontend/dist/
+frontend/build/
+
+# Ignore backend build
+backend/dist/
+backend/build/
+
+# OS files
+.DS_Store
+Thumbs.db
