@@ -16,6 +16,7 @@ const Home = () => {
       <a className="mr-5 hover:text-gray-900 font-semibold">Home</a>
       <a className="mr-5 hover:text-gray-900 font-semibold">About</a>
       <a className="mr-5 hover:text-gray-900 font-semibold">Contact</a>
+      <Link to={"/blog"} className="mr-5 hover:text-gray-900 font-semibold">Blog</Link>
        {user && user?.role === "admin" && <Link to={"/dashboard"} className="mr-5 hover:text-gray-900 font-semibold">Admin Dashboard</Link>}
       
     </nav>
