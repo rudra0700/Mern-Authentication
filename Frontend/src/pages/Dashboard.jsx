@@ -9,7 +9,7 @@ const Dashboard = () => {
 
   async function fetchAdminData() {
     try {
-      const { data } = await api.get(`${server}/api/v1/admin`, {
+      const { data } = await api.get(`${server}/api/v1/auth/admin`, {
         withCredentials: true,
       });
       setContent(data.message);

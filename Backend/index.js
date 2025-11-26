@@ -2,10 +2,10 @@ import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
 import connectDB from "./config/db.js";
-import userRoutes from "./routes/user.js";
 import { createClient } from "redis";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import { router } from "./routes/index.js";
 
 await connectDB();
 
@@ -36,7 +36,7 @@ app.use(cors({
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
 }))
 
-app.use("/api/v1", userRoutes);
+app.use("/api/v1", router);
 
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);

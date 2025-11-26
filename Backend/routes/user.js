@@ -25,4 +25,4 @@ router.post("/logout", isAuth, verifyCSRFToken, logoutUser);
 router.post("/refresh-csrf", isAuth, refreshCSRF);
 router.get("/admin", isAuth, authorizedAdmin, adminController);
 
-export default router;
+export const AuthRoutes = router;

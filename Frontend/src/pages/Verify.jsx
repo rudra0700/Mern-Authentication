@@ -15,7 +15,7 @@ const Verify = () => {
   const verifyUser = async () => {
     try {
       const { data } = await axios.post(
-        `${server}/api/v1/verify/${params.token}`
+        `${server}/api/v1/auth/verify/${params.token}`
       );
       setSuccessMessage(data.message);
     } catch (error) {

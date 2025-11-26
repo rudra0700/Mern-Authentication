@@ -1,6 +1,5 @@
 import bcrypt from "bcrypt";
 import sanitize from "mongo-sanitize";
-import { tryCatch } from "../middlewares/trycatch.js";
 import { loginZodSchema, registerZodSchema } from "../config/zod.js";
 import { redisClient } from "../index.js";
 import { User } from "../model/user.js";
@@ -13,6 +12,7 @@ import generateToken, {
   verifyRefreshToken,
 } from "../config/generateToken.js";
 import { generateCSRFToken } from "../config/csrfMiddleware.js";
+import { tryCatch } from "../middlewares/tryCatch.js";
 
 export const registerUser = tryCatch(async (req, res) => {
   const sanitizedBody = sanitize(req.body); // prevent NoSQL injection operation

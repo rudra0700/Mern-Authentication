@@ -14,7 +14,7 @@ const Register = () => {
     e.preventDefault();
     setBtnLoading(true);
     try {
-      const { data } = await axios.post(`${server}/api/v1/register`, {
+      const { data } = await axios.post(`${server}/api/v1/auth/register`, {
         name,
         email,
         password,

@@ -10,3 +10,10 @@ export const loginZodSchema = z.object({
   email: z.email("Invalid email format"),
   password: z.string().min(8, "Password have to be at least 8 char long"),
 });
+
+export const blogZodSchema = z.object({
+    title: z.string(),
+    description: z.string()
+});
+
+

@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     setBtnLoading(true);
     try {
-      const { data } = await axios.post(`${server}/api/v1/login`, {
+      const { data } = await axios.post(`${server}/api/v1/auth/login`, {
         email,
         password,
       });
